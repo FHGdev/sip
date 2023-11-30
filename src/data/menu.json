@@ -3,7 +3,8 @@
     "name": "Home",
     "url": "/sip/",
     "slug": "sip",
-    "className" : "home"    
+    "className" : "home",
+    "submenu": "" 
   },
   {
     "name": "Websites",
