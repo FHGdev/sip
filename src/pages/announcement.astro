@@ -11,7 +11,7 @@ import employeehub from '../data/employeehub.json';
 				<section class=" announcement"> 
                     <h2>Announcement</h2>
                     <ul class="announcement-list link-card-grid">
-                        {announcement.slice(0, 6).map(announcement => (
+                        {announcement.map(announcement => (
                             <li  role="list" class=" list">
                                 <div class="info">
                                     <div class="info-text">
@@ -26,7 +26,6 @@ import employeehub from '../data/employeehub.json';
                             </li>
                         ))}      
                     </ul>
-                    <a href="./announcement" class="btn btn-blue">View All</a>
                 </section>
 
                 <section class=" employeehub"> 

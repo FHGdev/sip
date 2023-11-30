@@ -1,0 +1,60 @@
+---
+import Layout from '../layouts/Layout.astro';
+import announcement from '../data/announcement.json';
+import employeehub from '../data/employeehub.json';
+---
+<Layout title="Staff Information Portal" meta_description="Staff Information Portal" body_class="home">
+    <div class="main">
+         
+        <div class="content-container container">
+			<div class="content">
+                <section class=" employeehub"> 
+                    <h2>Employee Hub</h2>
+                    <ul class="employeehub-list link-card-grid">
+                        {employeehub.map(employeehub => (
+                            <li  role="list" class=" list">
+                                <div class="info">
+                                    <div class="info-text">
+                                    <a href={`${employeehub.source}`} target="_blank"><h3>{employeehub.title}</h3></a>
+                                        <span class="date">{employeehub.date_posted}</span>
+                                        <p class="description">{employeehub.description}</p>
+                                    </div>
+                                    <div class="info-btn">
+                                        <a href={`${employeehub.source}`} class="btn btn-yellow" target="_blank">Read More >></a>
+                                    </div>
+                                </div>
+                            </li>
+                        ))}      
+                    </ul>
+                </section>
+                
+				<section class=" announcement"> 
+                    <h2>Announcement</h2>
+                    <ul class="announcement-list link-card-grid">
+                        {announcement.slice(0, 6).map(announcement => (
+                            <li  role="list" class=" list">
+                                <div class="info">
+                                    <div class="info-text">
+                                    <a href={`${announcement.source}`} target="_blank"><h3>{announcement.title}</h3></a>
+                                        <span class="date">{announcement.date_posted}</span>
+                                        <p class="description">{announcement.description}</p>
+                                    </div>
+                                    <div class="info-btn">
+                                        <a href={`${announcement.source}`} class="btn btn-yellow" target="_blank">Read More >></a>
+                                    </div>
+                                </div>
+                            </li>
+                        ))}      
+                    </ul>
+                    <a href="./announcement" class="btn btn-blue">View All</a>
+                </section>
+			</div>
+			
+			<aside>
+				<section class="container news"> 
+					<h2>News</h2>
+				</section>
+			</aside>
+		</div>   
+	</div>
+</Layout>
