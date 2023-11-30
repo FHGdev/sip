@@ -4,7 +4,7 @@
     "url": "/sip/",
     "slug": "sip",
     "className" : "home",
-    "submenu": "" 
+    "submenu": [] 
   },
   {
     "name": "Websites",
