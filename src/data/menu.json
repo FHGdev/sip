@@ -1,85 +1,103 @@
 [
   {
-    "name": "Home",
+    "name": "<i class=\"fa fa-users\"></i> Home",
     "url": "/sip/",
     "slug": "sip",
     "className" : "home",
     "submenu": [] 
   },
   {
-    "name": "Websites",
+    "name": "<i class=\"fas fa-globe-asia\"></i> Websites",
     "url": "#",
     "slug": "#",
     "className" : "active",
     "submenu": [
       {
-        "name": "Fullerton Health Group",
+        "name": "<i class=\"fas fa-globe-asia\"></i> Fullerton Health Group",
         "url": "https://www.fullertonhealth.com/",
         "slug": "fhg",
         "className" : "active"        
       },
       {
-        "name": "Fullerton Health SG",
+        "name": "<i class=\"fas fa-globe-asia\"></i> Fullerton Health SG",
         "url": "https://www.fullertonhealth.com/sg/",
         "slug": "fhg",
         "className" : "active"        
       },
       {
-        "name": "Fullerton Health Group",
-        "url": "https://www.fullertonhealth.com/",
+        "name": "<i class=\"fas fa-globe-asia\"></i> UrbanRehab",
+        "url": "https://urbanrehab.com.sg/",
         "slug": "fhg",
         "className" : "active"        
       }
     ]
   },
   {
-    "name": "Organization Chart",
+    "name": "<i class=\"fas fa-sitemap\"></i> Organization Chart",
     "url": "#",
     "slug": "organization-chart",
     "className" : "active",
     "submenu": [
       {
-        "name": "Fullerton Health Group",
-        "url": "https://www.fullertonhealth.com/",
-        "slug": "fhg",
+        "name": "<i class=\"fas fa-sitemap\"></i> Group",
+        "url": "https://fhcg.sharepoint.com/sites/SG/Shared%20Documents/Global%20Navigation/Grp%20Org%20Chart_April2023%20vF.pdf",
+        "slug": "orgchart-group",
         "className" : "active"        
       },
       {
-        "name": "Fullerton Health Group",
-        "url": "https://www.fullertonhealth.com/",
-        "slug": "fhg",
+        "name": "<i class=\"fas fa-sitemap\"></i> SG",
+        "url": "https://fhcg.sharepoint.com/sites/SG/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FSG%2FShared%20Documents%2FGlobal%20Navigation%2FSG%20Org%20Chart%5F1Nov2022%2Epdf&parent=%2Fsites%2FSG%2FShared%20Documents%2FGlobal%20Navigation&p=true&ga=1",
+        "slug": "orgchart-sg",
         "className" : "active"        
       },
       {
-        "name": "Fullerton Health Group",
-        "url": "https://www.fullertonhealth.com/",
-        "slug": "fhg",
+        "name": "<i class=\"fas fa-sitemap\"></i> Radlink",
+        "url": "https://fhcg.sharepoint.com/sites/SG/Shared%20Documents/Global%20Navigation/FH%20SG%20RadLink%20Org%20Chart_1%20May%202021.pdf",
+        "slug": "orgchart-radlink",
+        "className" : "active"        
+      },
+      {
+        "name": "<i class=\"fas fa-sitemap\"></i> IHP",
+        "url": "https://fhcg.sharepoint.com/sites/SG/_layouts/15/guestaccess.aspx?e=KDpHdr&share=EcO0Caot2ZVBpEn4cGC7j80BQvC4T5XNGzlrrE8mdnnlIA",
+        "slug": "orgchart-ihp",
         "className" : "active"        
       }
     ]
   },
   {
-    "name": "Menu",
+    "name": "<i class=\"fas fa-cogs\"></i> Menu",
     "url": "#",
     "slug": "menu",
     "className" : "active",
     "submenu": [
       {
-        "name": "Fullerton Health Group",
-        "url": "https://www.fullertonhealth.com/",
-        "slug": "fhg",
+        "name": "<i class=\"fa fa-users\"></i> My Traning",
+        "url": "https://training.knowbe4.com/ui/login",
+        "slug": "my-traning",
         "className" : "active"        
       },
       {
-        "name": "Fullerton Health Group",
-        "url": "https://www.fullertonhealth.com/",
-        "slug": "fhg",
+        "name": "<i class=\"fas fa-file-invoice\"></i> Vendor Maintenance Form",
+        "url": "https://fhcg-my.sharepoint.com/:x:/r/personal/digital_fullertonhealth_com/_layouts/15/Doc.aspx?sourcedoc=%7BD67B3EA8-80FF-4808-BF29-9C0D53FC1065%7D&file=Vendor%20Maintenance%20Form%20(V3).xlsx&action=default&mobileredirect=true",
+        "slug": "vendor-maintenance-form",
         "className" : "active"        
       },
       {
-        "name": "Fullerton Health Group",
-        "url": "https://www.fullertonhealth.com/",
-        "slug": "fhg",
+        "name": "<i class=\"fa fa-user\"></i> Jira - IT",
+        "url": "https://jira.fullertonhealth.com/",
+        "slug": "jira-it",
+        "className" : "active"        
+      },
+      {
+        "name": "<i class=\"fa fa-users\"></i> HRIS (HR Info System)",
+        "url": "https://ap17.bipocloud.com/FHHRS/login",
+        "slug": "hris",
+        "className" : "active"        
+      },
+      {
+        "name": "<i class=\"fas fa-dollar-sign\"></i> Staff Claim",
+        "url": "https://ap.bipocloud.com/FHG/Login",
+        "slug": "staff-claim",
         "className" : "active"        
       }
     ]
