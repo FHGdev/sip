@@ -1,8 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import announcement from '../data/announcement.json';
+console.log(announcement)
 ---
 <Layout title="Staff Information Portal" meta_description="Staff Information Portal" body_class="home">
     <div class="main">
+        <section class=" announcement"> 
+            <h2>Announcement</h2>
+            <ul class="announcement-list link-card-grid">
+                {announcement.map(announcement => (
+                    <li  >
+                      <a href={`${announcement.source}`}>{announcement.title}</a>
+                    </li>
+                ))}      
+            </ul>
+        </section>    
 	</div>
 </Layout>

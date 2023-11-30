@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Home",
+    "url": "/sip/",
+    "slug": "sip",
+    "className" : "home"    
+  },
+  {
+    "name": "Websites",
+    "url": "#",
+    "slug": "#",
+    "className" : "active",
+    "submenu": [
+      {
+        "name": "Fullerton Health Group",
+        "url": "https://www.fullertonhealth.com/",
+        "slug": "fhg",
+        "className" : "active"        
+      },
+      {
+        "name": "Fullerton Health SG",
+        "url": "https://www.fullertonhealth.com/sg/",
+        "slug": "fhg",
+        "className" : "active"        
+      },
+      {
+        "name": "Fullerton Health Group",
+        "url": "https://www.fullertonhealth.com/",
+        "slug": "fhg",
+        "className" : "active"        
+      }
+    ]
+  },
+  {
+    "name": "Organization Chart",
+    "url": "#",
+    "slug": "organization-chart",
+    "className" : "active",
+    "submenu": [
+      {
+        "name": "Fullerton Health Group",
+        "url": "https://www.fullertonhealth.com/",
+        "slug": "fhg",
+        "className" : "active"        
+      },
+      {
+        "name": "Fullerton Health Group",
+        "url": "https://www.fullertonhealth.com/",
+        "slug": "fhg",
+        "className" : "active"        
+      },
+      {
+        "name": "Fullerton Health Group",
+        "url": "https://www.fullertonhealth.com/",
+        "slug": "fhg",
+        "className" : "active"        
+      }
+    ]
+  },
+  {
+    "name": "Menu",
+    "url": "#",
+    "slug": "menu",
+    "className" : "active",
+    "submenu": [
+      {
+        "name": "Fullerton Health Group",
+        "url": "https://www.fullertonhealth.com/",
+        "slug": "fhg",
+        "className" : "active"        
+      },
+      {
+        "name": "Fullerton Health Group",
+        "url": "https://www.fullertonhealth.com/",
+        "slug": "fhg",
+        "className" : "active"        
+      },
+      {
+        "name": "Fullerton Health Group",
+        "url": "https://www.fullertonhealth.com/",
+        "slug": "fhg",
+        "className" : "active"        
+      }
+    ]
+  }
+]
