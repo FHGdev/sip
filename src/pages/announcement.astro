@@ -17,7 +17,7 @@ import employeehub from '../data/employeehub.json';
                                     <div class="info-text">
                                     <a href={`${announcement.source}`} target="_blank"><h3>{announcement.title}</h3></a>
                                         <span class="date">{announcement.date_posted}</span>
-                                        <p class="description">{announcement.description}</p>
+                                        <div class="description" set:html={announcement.description}></div>
                                     </div>
                                     <div class="info-btn">
                                         <a href={`${announcement.source}`} class="btn btn-yellow" target="_blank">Read More >></a>
