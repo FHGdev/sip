@@ -1,11 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
 import announcement from '../data/announcement.json';
 import employeehub from '../data/employeehub.json';
 ---
 <Layout title="Staff Information Portal" meta_description="Staff Information Portal" body_class="home">
-    <div class="main">
-         
+    <Container className="container-content main">         
         <div class="content-container container">
 			<div class="content">				
 				<section class=" announcement"> 
@@ -56,5 +56,5 @@ import employeehub from '../data/employeehub.json';
 				</section>
 			</aside>
 		</div>   
-	</div>
+	</Container>
 </Layout>

@@ -30,7 +30,7 @@ const { slug } = Astro.params;
         <ul>
           {menuData.map(menu => (
             <li class={`${menu.submenu ? 'has-submenu' : '' } ${menu.slug == slug ? 'active' : ' ' }`} >
-              <a href={`${menu.url}`} set:html={menu.name} target="_blank"> </a>
+              <a href={`${menu.url}`} set:html={menu.name} > </a>
               {menu.submenu && (
                 <ul class="sub-menu-1 sub-menu">
                   {menu.submenu.map(submenuItem => (

@@ -3,8 +3,7 @@
     "name": "<i class=\"fa fa-users\"></i> Home",
     "url": "/sip/",
     "slug": "sip",
-    "className" : "home",
-    "submenu": [] 
+    "className" : "home"
   },
   {
     "name": "<i class=\"fas fa-globe-asia\"></i> Websites",

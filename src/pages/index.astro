@@ -1,14 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Container from '../components/Container.astro';
 import announcement from '../data/announcement.json';
 import employeehub from '../data/employeehub.json';
 ---
 <Layout title="Staff Information Portal" meta_description="Staff Information Portal" body_class="home">
-    <div class="main">
-         
+    <Container className="container-content main">
         <div class="content-container container">
-			<div class="content">				
-				<section class=" announcement"> 
+            <div class="content">				
+                <section class=" announcement"> 
                     <h2>Announcement</h2>
                     <ul class="announcement-list link-card-grid">
                         {announcement.slice(0, 6).map(announcement => (
@@ -49,13 +49,13 @@ import employeehub from '../data/employeehub.json';
                     </ul>
                     <a href="./employeehub" class="btn btn-blue">View All</a>
                 </section>
-			</div>
-			
-			<aside>
-				<section class="container news"> 
-					<h2>News</h2>
-				</section>
-			</aside>
-		</div>   
-	</div>
+            </div>
+            
+            <aside>
+                <section class="container news"> 
+                    <h2>News</h2>
+                </section>
+            </aside>
+        </div> 
+    </Container>  
 </Layout>
