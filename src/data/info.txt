@@ -1,0 +1,5 @@
+Guides
+=====================================
+For news.json
+news_cat       = Newsletter | Press Release
+news_cat_slug  = newsletter | press-release

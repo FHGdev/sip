@@ -4,6 +4,7 @@ import Container from '../components/Container.astro';
 import announcement from '../data/announcement.json';
 import employeehub from '../data/employeehub.json';
 import globallink from '../data/globallink.json';
+import news from '../data/news.json';
 ---
 <Layout title="Staff Information Portal" meta_description="Staff Information Portal" body_class="home">
     <div class="main">
@@ -74,8 +75,17 @@ import globallink from '../data/globallink.json';
                 </div>
                 
                 <aside>
-                    <section class="container news"> 
+                    <section class="news"> 
                         <h2>News</h2>
+                        <div class="global-link">
+                            <ul class="">
+                                {news.map(news => (
+                                    <li class={`${news.news_cat_slug} `} >                                        
+                                        <a href={`${news.source}`} set:html={news.title} target="_blank" > </a>
+                                    </li>
+                                ))}
+                            </ul>  
+                        </div>
                     </section>
                 </aside>
             </div>   
