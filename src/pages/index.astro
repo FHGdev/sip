@@ -9,7 +9,7 @@ import globallink from '../data/globallink.json';
     <div class="main">
         <Container className="container-content">
             <div class="global-link">
-                <ul class="flex justify-center">
+                <ul class="flex justify-center flex-wrap">
                     {globallink.map(link => (
                         <li class={`${link.submenu ? 'has-submenu' : '' } icon`} >
                         <a href={`${link.url}`} set:html={link.name} > </a>

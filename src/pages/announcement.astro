@@ -3,58 +3,82 @@ import Layout from '../layouts/Layout.astro';
 import Container from '../components/Container.astro';
 import announcement from '../data/announcement.json';
 import employeehub from '../data/employeehub.json';
+import globallink from '../data/globallink.json';
 ---
 <Layout title="Staff Information Portal" meta_description="Staff Information Portal" body_class="home">
-    <Container className="container-content main">         
-        <div class="content-container container">
-			<div class="content">				
-				<section class=" announcement"> 
-                    <h2>Announcement</h2>
-                    <ul class="announcement-list link-card-grid">
-                        {announcement.map(announcement => (
-                            <li  role="list" class=" list">
-                                <div class="info">
-                                    <div class="info-text">
-                                    <a href={`${announcement.source}`} target="_blank"><h3>{announcement.title}</h3></a>
-                                        <span class="date">{announcement.date_posted}</span>
-                                        <div class="description" set:html={announcement.description}></div>
+    <div class="main">
+        <Container className="container-content">
+            <div class="global-link">
+                <ul class="flex justify-center flex-wrap">
+                    {globallink.map(link => (
+                        <li class={`${link.submenu ? 'has-submenu' : '' } icon`} >
+                        <a href={`${link.url}`} set:html={link.name} > </a>
+                        {link.submenu && (
+                            <ul class="sub-menu">
+                            {link.submenu.map(submenuItem => (
+                                <li class="icon">
+                                <a href={`${submenuItem.url}`} set:html={submenuItem.name}  target="_blank"></a>                      
+                                </li>                    
+                            ))}
+                            <li class="back"><a href="#">Back</a></li>
+                            </ul>
+                        )}
+                        </li>
+                    ))}
+                </ul>  
+            </div>
+        </Container>
+        <Container className="container-content">         
+            <div class="content-container container">
+                <div class="content">				
+                    <section class=" announcement"> 
+                        <h2>Announcement</h2>
+                        <ul class="announcement-list link-card-grid">
+                            {announcement.map(announcement => (
+                                <li  role="list" class=" list">
+                                    <div class="info">
+                                        <div class="info-text">
+                                        <a href={`${announcement.source}`} target="_blank"><h3>{announcement.title}</h3></a>
+                                            <span class="date">{announcement.date_posted}</span>
+                                            <div class="description" set:html={announcement.description}></div>
+                                        </div>
+                                        <div class="info-btn">
+                                            <a href={`${announcement.source}`} class="btn btn-yellow" target="_blank">Read More >></a>
+                                        </div>
                                     </div>
-                                    <div class="info-btn">
-                                        <a href={`${announcement.source}`} class="btn btn-yellow" target="_blank">Read More >></a>
-                                    </div>
-                                </div>
-                            </li>
-                        ))}      
-                    </ul>
-                </section>
+                                </li>
+                            ))}      
+                        </ul>
+                    </section>
 
-                <section class=" employeehub"> 
-                    <h2>Employee Hub</h2>
-                    <ul class="employeehub-list link-card-grid">
-                        {employeehub.slice(0, 6).map(employeehub => (
-                            <li  role="list" class=" list">
-                                <div class="info">
-                                    <div class="info-text">
-                                    <a href={`${employeehub.source}`} target="_blank"><h3>{employeehub.title}</h3></a>
-                                        <span class="date">{employeehub.date_posted}</span>
-                                        <p class="description">{employeehub.description}</p>
+                    <section class=" employeehub"> 
+                        <h2>Employee Hub</h2>
+                        <ul class="employeehub-list link-card-grid">
+                            {employeehub.slice(0, 6).map(employeehub => (
+                                <li  role="list" class=" list">
+                                    <div class="info">
+                                        <div class="info-text">
+                                        <a href={`${employeehub.source}`} target="_blank"><h3>{employeehub.title}</h3></a>
+                                            <span class="date">{employeehub.date_posted}</span>
+                                            <p class="description">{employeehub.description}</p>
+                                        </div>
+                                        <div class="info-btn">
+                                            <a href={`${employeehub.source}`} class="btn btn-yellow" target="_blank">Read More >></a>
+                                        </div>
                                     </div>
-                                    <div class="info-btn">
-                                        <a href={`${employeehub.source}`} class="btn btn-yellow" target="_blank">Read More >></a>
-                                    </div>
-                                </div>
-                            </li>
-                        ))}      
-                    </ul>
-                    <a href="../employeehub" class="btn btn-blue">View All</a>
-                </section>
-			</div>
-			
-			<aside>
-				<section class="container news"> 
-					<h2>News</h2>
-				</section>
-			</aside>
-		</div>   
-	</Container>
+                                </li>
+                            ))}      
+                        </ul>
+                        <a href="../employeehub" class="btn btn-blue">View All</a>
+                    </section>
+                </div>
+                
+                <aside>
+                    <section class="container news"> 
+                        <h2>News</h2>
+                    </section>
+                </aside>
+            </div>   
+        </Container>
+    </div>
 </Layout>

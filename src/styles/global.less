@@ -144,7 +144,7 @@ section {
 		align-items: center;
 		text-align: center;
 		width: 100%;
-		padding: 10px 10px;
+		padding: 10px 0;
 		font-size: var(--font-size-sm);
 	}
 	i {
@@ -158,10 +158,11 @@ section {
 		position: relative;
 		.sub-menu {
 			position: absolute;
-			left: -50%;
+			left: 0;
 			top: 100%;
 			display: none;
 			background: #fff;
+			transition: all 300ms ease-in;
 		}
 		.back {
 			display: none;
@@ -169,7 +170,9 @@ section {
 
 		&:hover {
 			.sub-menu {
+				transition: all 300ms ease-in;
 				display: flex;
+				flex-direction: column;
 			}
 		}
 	}
@@ -202,6 +205,9 @@ section {
 	display: flex;
 	&.justify-center {
 		justify-content: center;
+	}
+	&.flex-wrap {
+		flex-wrap: wrap;
 	}
 }
 
