@@ -52,6 +52,10 @@ h1, h2, h3, h4, h5 ,h6, p, div, span {
 section {
 	padding: 0 10px;
 	margin: 20px 0;
+	h2 {
+		font-size: var(--font-size-md);
+    	font-family: var(--theme-font-family-effra);
+	}
 }
 .align-center {
 	text-align: center;
@@ -64,7 +68,7 @@ section {
 	background: #cccccc47;
     padding: 10px 10px;
 	width: 100%;
-	border-radius: 10px;
+	border-radius: 5px;
 	box-shadow: 3px 3px 3px #cccccc7d;
 	display: flex;
 	&:hover {
@@ -90,7 +94,6 @@ section {
 	}
 }
 .link-card-grid {
-
     gap: 10px;
 	list-style: none;
 	margin: 0;
@@ -109,6 +112,7 @@ section {
 			}
 			.date {
 				font-size: var(--font-size-xsm);
+				font-style: italic;
 			}
 			.description {
 				font-size: var(--font-size-sm);
@@ -119,6 +123,53 @@ section {
 		.info-btn {
 			a {
 				font-size: var(--font-size-sm);
+			}
+		}
+	}
+}
+.icon {
+	width: 150px;
+    min-height: 70px;
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.425);
+    justify-content: center;
+    align-items: center;
+	background: #fff;
+	&:hover {
+		box-shadow: 3px 3px 3px #12121244;
+	}
+	a {
+		display: inline-flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+		padding: 10px 10px;
+		font-size: var(--font-size-sm);
+	}
+	i {
+		font-size: 24px;
+		margin: 0 10px 0 0;
+	}
+	h3 {
+		font-size: 22px;
+	}
+	&.has-submenu {
+		position: relative;
+		.sub-menu {
+			position: absolute;
+			left: -50%;
+			top: 100%;
+			display: none;
+			background: #fff;
+		}
+		.back {
+			display: none;
+		}
+
+		&:hover {
+			.sub-menu {
+				display: flex;
 			}
 		}
 	}
@@ -146,8 +197,12 @@ section {
 		color: #000;
 	}
 }
-ul {
-	list-style: none !important;
+
+.flex {
+	display: flex;
+	&.justify-center {
+		justify-content: center;
+	}
 }
 
 @media (max-width: 991px) {

@@ -1,0 +1,32 @@
+[
+  {
+    "name": "<i class='fas fa-users'></i> Policy Hub",
+    "url": "https://fhcg.sharepoint.com/sites/SG/Shared%20Documents/Announcements/Policy%20Hub"
+  },
+  {
+    "name": "<i class='fas fa-users'></i> Corporate Stationary",
+    "url": "https://fhcg.sharepoint.com/sites/SG/Shared%20Documents/Announcements/Corporate%20Stationery"
+  },
+  {
+    "name": "<i class='fas fa-users'></i> HR Stuff",
+    "url": "#",
+    "submenu": [
+      {
+        "name": "<i class='fa fa-users'></i> HRIS (HR Info System)",
+        "url": "https://ap17.bipocloud.com/FHHRS/login"
+      },
+      {
+        "name": "<i class='fas fa-dollar-sign'></i> Staff Claim",
+        "url": "https://ap.bipocloud.com/FHG/Login"
+      }
+    ]
+  },
+  {
+    "name": "<i class='fas fa-users'></i> IT Stuff",
+    "url": "https://jira.fullertonhealth.com/"
+  },
+  {
+    "name": "<i class='fas fa-users'></i> Legal Stuff",
+    "url": "#"
+  }
+]
