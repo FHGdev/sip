@@ -79,10 +79,13 @@ import news from '../data/news.json';
                     <section class="news"> 
                         <h2>News</h2>
                         <div class="global-link">
-                            <ul class="">
-                                {news.map(news => (
-                                    <li class={`${news.news_cat_slug} `} >                                        
-                                        <a href={`${news.source}`} set:html={news.title} target="_blank" > </a>
+                            <ul class="news-list">
+                                {news.slice(0, 9).map(news => (
+                                    <li class={`${news.news_cat_slug} `} >
+                                        <span class={`cat ${news.news_cat_slug}`} set:html={news.news_cat}></span>                                     
+                                        <a href={`${news.source}`}  target="_blank" ><h5 set:html={news.title}></h5> </a>
+                                        <span class="date" set:html={news.date_posted}></span>
+                                        <p set:html={news.description}></p>
                                     </li>
                                 ))}
                             </ul>  
