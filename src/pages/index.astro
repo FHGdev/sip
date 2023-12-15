@@ -8,7 +8,7 @@ import news from '../data/news.json';
 ---
 <Layout title="Staff Information Portal" meta_description="Staff Information Portal" body_class="home">
     <div class="main">
-        <Container className="container-content">
+        <Container className="container-content hide">
             <div class="global-link">
                 <ul class="flex justify-center flex-wrap">
                     {globallink.map(link => (
@@ -29,14 +29,14 @@ import news from '../data/news.json';
                 </ul>  
             </div>
         </Container>
-        <Container className="container-content">
-            <div class="content-container">
+        <Container className="container-content" >
+            <div class="content-container" >
                 <div class="content">				
-                    <section class=" announcement"> 
+                    <section class="announcement" transition:name="media-player"> 
                         <h2>Announcement</h2>
                         <ul class="announcement-list link-card-grid">
                             {announcement.slice(0, 6).map(announcement => (
-                                <li  role="list" class=" list">
+                                <li role="list" class="list">
                                     <div class="info">
                                         <div class="info-text">
                                         <a href={`${announcement.source}`} target="_blank"><h3>{announcement.title}</h3></a>
@@ -53,7 +53,7 @@ import news from '../data/news.json';
                         <a href="./announcement" class="btn btn-blue">View All</a>
                     </section>
 
-                    <section class=" employeehub"> 
+                    <section class=" employeehub"  transition:animate="fade"> 
                         <h2>Employee Hub</h2>
                         <ul class="employeehub-list link-card-grid">
                             {employeehub.slice(0, 6).map(employeehub => (
@@ -76,16 +76,16 @@ import news from '../data/news.json';
                 </div>
                 
                 <aside>
-                    <section class="news"> 
+                    <section class="news"  transition:animate="slide"> 
                         <h2>News</h2>
                         <div class="global-link">
                             <ul class="news-list">
                                 {news.slice(0, 9).map(news => (
-                                    <li class={`${news.news_cat_slug} `} >
+                                    <li class={`${news.news_cat_slug} list newsletter-list`} >
                                         <span class={`cat ${news.news_cat_slug}`} set:html={news.news_cat}></span>                                     
-                                        <a href={`${news.source}`}  target="_blank" ><h5 set:html={news.title}></h5> </a>
+                                        <a href={`${news.source}`}  target="_blank" ><h5 set:html={news.title} class="title"></h5> </a>
                                         <span class="date" set:html={news.date_posted}></span>
-                                        <p set:html={news.description}></p>
+                                        <p set:html={news.description} class="description"></p>
                                     </li>
                                 ))}
                             </ul>

@@ -2,37 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import Container from '../components/Container.astro';
 import announcement from '../data/announcement.json';
-import employeehub from '../data/employeehub.json';
-import globallink from '../data/globallink.json';
-import news from '../data/news.json';
 ---
-<Layout title="Staff Information Portal" meta_description="Staff Information Portal" body_class="home">
+<Layout title="Staff Information Portal | Announcement" meta_description="Staff Information Portal | Announcement" body_class="home">
     <div class="main">
-        <Container className="container-content">
-            <div class="global-link">
-                <ul class="flex justify-center flex-wrap">
-                    {globallink.map(link => (
-                        <li class={`${link.submenu ? 'has-submenu' : '' } icon`} >
-                        <a href={`${link.url}`} set:html={link.name} > </a>
-                        {link.submenu && (
-                            <ul class="sub-menu">
-                            {link.submenu.map(submenuItem => (
-                                <li class="icon">
-                                <a href={`${submenuItem.url}`} set:html={submenuItem.name}  target="_blank"></a>                      
-                                </li>                    
-                            ))}
-                            <li class="back"><a href="#">Back</a></li>
-                            </ul>
-                        )}
-                        </li>
-                    ))}
-                </ul>  
-            </div>
-        </Container>
-        <Container className="container-content">         
-            <div class="content-container container">
+        <Container className="container-content" >         
+            <div class="content-container-fullwidth container" >
                 <div class="content">				
-                    <section class=" announcement"> 
+                    <section class=" announcement" transition:name="media-player"> 
                         <h2>Announcement</h2>
                         <ul class="announcement-list link-card-grid">
                             {announcement.map(announcement => (
@@ -44,53 +20,14 @@ import news from '../data/news.json';
                                             <div class="description" set:html={announcement.description}></div>
                                         </div>
                                         <div class="info-btn">
-                                            <a href={`${announcement.source}`} class="btn btn-yellow" target="_blank">Read More >></a>
+                                            <a href={`${announcement.source}`} class="btn btn-yellow" target="_blank">Read More</a>
                                         </div>
                                     </div>
                                 </li>
                             ))}      
                         </ul>
                     </section>
-
-                    <section class=" employeehub"> 
-                        <h2>Employee Hub</h2>
-                        <ul class="employeehub-list link-card-grid">
-                            {employeehub.slice(0, 6).map(employeehub => (
-                                <li  role="list" class=" list">
-                                    <div class="info">
-                                        <div class="info-text">
-                                        <a href={`${employeehub.source}`} target="_blank"><h3>{employeehub.title}</h3></a>
-                                            <span class="date">{employeehub.date_posted}</span>
-                                            <p class="description">{employeehub.description}</p>
-                                        </div>
-                                        <div class="info-btn">
-                                            <a href={`${employeehub.source}`} class="btn btn-yellow" target="_blank">Read More >></a>
-                                        </div>
-                                    </div>
-                                </li>
-                            ))}      
-                        </ul>
-                        <a href="../employeehub" class="btn btn-blue">View All</a>
-                    </section>
-                </div>
-                
-                <aside>
-                    <section class="news"> 
-                        <h2>News</h2>
-                        <div class="global-link">
-                            <ul class="news-list">
-                                {news.slice(0, 9).map(news => (
-                                    <li class={`${news.news_cat_slug} `} >
-                                        <span class={`cat ${news.news_cat_slug}`} set:html={news.news_cat}></span>                                     
-                                        <a href={`${news.source}`}  target="_blank" ><h5 set:html={news.title}></h5> </a>
-                                        <span class="date" set:html={news.date_posted}></span>
-                                        <p set:html={news.description}></p>
-                                    </li>
-                                ))}
-                            </ul>  
-                        </div>
-                    </section>
-                </aside>
+                </div>    
             </div>   
         </Container>
     </div>

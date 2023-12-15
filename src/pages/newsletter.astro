@@ -1,38 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Container from '../components/Container.astro';
-import announcement from '../data/announcement.json';
-import employeehub from '../data/employeehub.json';
-import globallink from '../data/globallink.json';
 import news from '../data/news.json';
 ---
-<Layout title="Staff Information Portal" meta_description="Staff Information Portal" body_class="home">
+<Layout title="Staff Information Portal | Newsletter" meta_description="Staff Information Portal | Newsletter" body_class="home">
     <div class="main">
-        <Container className="container-content">
-            <div class="global-link">
-                <ul class="flex justify-center flex-wrap">
-                    {globallink.map(link => (
-                        <li class={`${link.submenu ? 'has-submenu' : '' } icon`} >
-                        <a href={`${link.url}`} set:html={link.name} > </a>
-                        {link.submenu && (
-                            <ul class="sub-menu">
-                            {link.submenu.map(submenuItem => (
-                                <li class="icon">
-                                <a href={`${submenuItem.url}`} set:html={submenuItem.name}  target="_blank"></a>                      
-                                </li>                    
-                            ))}
-                            <li class="back"><a href="#">Back</a></li>
-                            </ul>
-                        )}
-                        </li>
-                    ))}
-                </ul>  
-            </div>
-        </Container>
-        <Container className="container-content ">  
-            <div class="content-container container">
+        <Container className="container-content" >         
+            <div class="content-container-fullwidth container" >
                 <div class="content">
-                    <section class="news"> 
+                    <section class="news" transition:name="slide"> 
                         <h2>News</h2>
                         <div class="global-link">
                             <ul class="news-list">

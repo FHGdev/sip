@@ -1,5 +1,9 @@
 [
   {
+    "name": "<i class=\"fa fa-users\"></i> Home",
+    "url": "/sip/"
+  },
+  {
     "name": "<i class='fas fa-users'></i> Policy Hub",
     "url": "https://fhcg.sharepoint.com/sites/SG/Shared%20Documents/Announcements/Policy%20Hub"
   },
@@ -8,7 +12,25 @@
     "url": "https://fhcg.sharepoint.com/sites/SG/Shared%20Documents/Announcements/Corporate%20Stationery"
   },
   {
-    "name": "<i class='fas fa-users'></i> HR Stuff",
+    "name": "<i class=\"fas fa-globe-asia\"></i> Websites",
+    "url": "#",
+    "submenu": [
+      {
+        "name": "<i class=\"fas fa-globe-asia\"></i> Fullerton Health Group",
+        "url": "https://www.fullertonhealth.com/"     
+      },
+      {
+        "name": "<i class=\"fas fa-globe-asia\"></i> Fullerton Health SG",
+        "url": "https://www.fullertonhealth.com/sg/"     
+      },
+      {
+        "name": "<i class=\"fas fa-globe-asia\"></i> UrbanRehab",
+        "url": "https://urbanrehab.com.sg/"  
+      }
+    ]
+  },
+  {
+    "name": "<i class='fas fa-users'></i> HR",
     "url": "#",
     "submenu": [
       {
@@ -22,11 +44,17 @@
     ]
   },
   {
-    "name": "<i class='fas fa-users'></i> IT Stuff",
-    "url": "https://jira.fullertonhealth.com/"
+    "name": "<i class='fas fa-users'></i> IT",
+    "url": "#",
+    "submenu": [
+      {
+        "name": "<i class='fa fa-users'></i> Jira",
+        "url": "https://jira.fullertonhealth.com/"
+      }
+    ]
   },
   {
-    "name": "<i class='fas fa-users'></i> Legal Stuff",
+    "name": "<i class='fas fa-users'></i> Legal",
     "url": "#"
   }
 ]

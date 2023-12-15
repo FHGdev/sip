@@ -2,10 +2,11 @@
 import { Icon } from 'astro-icon'
 import Container from '../components/Container.astro';
 import menuData from '../data/menu.json';
+import globallink from '../data/globallink.json';
 const { slug } = Astro.params;
 
 ---
-<header id="navHeader" class="header--right white-bg">
+<header id="navHeader" class="header--right white-bg" transition:animate="fade">
   <Container className="container-header">
   <div class="header-logo-menu__container">
     <a class="header-logo__link" href="/sip/">
@@ -24,7 +25,7 @@ const { slug } = Astro.params;
     </button>
     
   </div>
-  <div class="header-nav__container">
+  <!-- <div class="header-nav__container">
     <slot name="nav">
       <nav>
         <ul>
@@ -44,6 +45,31 @@ const { slug } = Astro.params;
             </li>
           ))}
         </ul>
+      </nav>    
+    </slot>
+  </div> -->
+  <div class="header-nav__container">
+    <slot name="nav">
+      <nav>
+        <div class="global-link">
+          <ul>
+            {globallink.map(link => (
+              <li class={`${link.submenu ? 'has-submenu' : '' } icon`} >
+              <a href={`${link.url}`} set:html={link.name} > </a>
+              {link.submenu && (
+                  <ul class="sub-menu">
+                  {link.submenu.map(submenuItem => (
+                      <li class="flex justify-flex-start">
+                      <a href={`${submenuItem.url}`} set:html={submenuItem.name}  target="_blank"></a>                      
+                      </li>                    
+                  ))}
+                  <li class="back"><a href="#">Back</a></li>
+                  </ul>
+              )}
+              </li>
+            ))}
+          </ul>
+        </div>
       </nav>    
     </slot>
   </div>
