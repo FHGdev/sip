@@ -5,9 +5,12 @@ import announcement from '../data/announcement.json';
 import employeehub from '../data/employeehub.json';
 import globallink from '../data/globallink.json';
 import news from '../data/news.json';
+
+import Slider from '../components/Slider.astro';
 ---
 <Layout title="Staff Information Portal" meta_description="Staff Information Portal" body_class="home">
     <div class="main">
+        <Slider></Slider>
         <Container className="container-content hide">
             <div class="global-link">
                 <ul class="flex justify-center flex-wrap">

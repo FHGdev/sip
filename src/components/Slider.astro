@@ -1,0 +1,26 @@
+---
+import slider from '../data/slider.json';
+---
+
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        {slider.map(slider => (
+            <div class="swiper-slide">
+                <img src={slider.image}>
+            </div>
+        ))}
+    </div>
+</div>
+
+
+<link is:inline rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<style>
+    .mySwiper {
+        max-height: 500px;
+    }
+</style>
+
+  <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script  is:inline>
+    var swiper = new Swiper(".mySwiper", {});
+  </script>
